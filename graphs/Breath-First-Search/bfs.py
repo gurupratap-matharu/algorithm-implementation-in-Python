@@ -15,7 +15,10 @@ class Graph:
 
     def BFS(self, s):
         """Prints a breadth first search of the graph from vertex S."""
-        print(self.graph[s])
+
+        for node in self.graph[s]:
+            if node != s:
+                print(node)
 
 
 g1 = Graph()
@@ -25,4 +28,8 @@ g1.addEdge('A', 'D')
 g1.addEdge('A', 'E')
 g1.addEdge('B', 'C')
 g1.addEdge('B', 'F')
+g1.addEdge('A', 'A')
+g1.addEdge('A', 'A')
+g1.addEdge('A', 'A')
+g1.addEdge('A', 'A')
 g1.BFS('A')
